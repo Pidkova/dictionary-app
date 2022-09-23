@@ -37,7 +37,7 @@ export default function Dictionary(props) {
           <div className="row mt-2">
             <div className="col-9">
               <input
-                type={"search"}
+                type={"text"}
                 autoFocus={true}
                 onChange={handleKeywordChange}
                 className="form-control input-focus-color-dark "
