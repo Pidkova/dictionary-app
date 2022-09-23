@@ -1,0 +1,26 @@
+a {
+  border: 1px solid rgb(241, 225, 84);
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 12px;
+  color: rgb(215, 200, 68);
+  margin-right: 10px;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: all 100ms ease-in-out;
+}
+
+a:hover {
+  background: rgb(241, 225, 84);
+  color: white;
+}
+.transcription {
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+.Phonetics h2 {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 36px;
+}

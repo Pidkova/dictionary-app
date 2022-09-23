@@ -1,13 +1,14 @@
 import React from "react";
 import Example from "./Example";
 import Synonyms from "./Synonyms";
+import "./Meaning.css";
 
 export default function Meaning(props) {
   console.log(props.meaning);
   let synonyms = props.meaning.synonyms;
 
   return (
-    <div>
+    <div className="section Meaning">
       <h3>{props.meaning.partOfSpeech}</h3>
       {props.meaning.definitions.map(function(definition, index) {
         return (
@@ -15,10 +16,11 @@ export default function Meaning(props) {
             <p>
               <strong>Definition:</strong>
               {definition.definition}
-              <br />
-              <Example example={definition.example} />
-              <br />
             </p>
+            <div className="example">
+              <Example example={definition.example} />
+            </div>
+            <hr className="border border-secondary" />
           </div>
         );
       })}
