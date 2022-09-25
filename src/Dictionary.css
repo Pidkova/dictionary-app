@@ -1,6 +1,9 @@
 .Dictionary {
   text-align: start;
 }
+.container {
+  margin-top: 150px;
+}
 .form-control:focus {
   border-color: rgb(244, 233, 137);
   box-shadow: 0 0 0 0.2rem rgba(249, 239, 144, 0.801);
@@ -20,4 +23,7 @@
   font-size: 18px;
   font-weight: bold;
   text-align: start;
+}
+.Dictionary .Word-search {
+  margin-bottom: 50px;
 }

@@ -1,4 +1,4 @@
-a {
+.listen-link {
   border: 1px solid rgb(241, 225, 84);
   text-decoration: none;
   padding: 8px 15px;
@@ -10,7 +10,7 @@ a {
   transition: all 100ms ease-in-out;
 }
 
-a:hover {
+.listen-link:hover {
   background: rgb(241, 225, 84);
   color: white;
 }
