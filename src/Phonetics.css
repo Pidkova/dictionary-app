@@ -1,0 +1,19 @@
+.Phonetics h2 {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 36px;
+}
+.Phonetics .col .trancription {
+  justify-content: start;
+}
+
+@media (max-width: 820px) {
+  .Phonetics .col .audio {
+    margin-right: 32px;
+    margin-bottom: 5px;
+  }
+
+  .Phonetics h2 {
+    font-size: 30px;
+  }
+}

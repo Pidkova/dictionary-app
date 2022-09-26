@@ -5,10 +5,10 @@ export default function Photos(props) {
   if (props.photos) {
     return (
       <div className="Photos section">
-        <div className="row">
+        <div className="row mt-3">
           {props.photos.map(function(photo, index) {
             return (
-              <div className="col-4" key={index}>
+              <div className="col-md-4 col-sm-6" key={index}>
                 <a
                   href={photo.src.original}
                   target="_blank"

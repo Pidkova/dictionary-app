@@ -1,42 +1,55 @@
 body {
   background: rgba(241, 235, 181, 0.911);
+  font-family: "Poppins", sans-serif;
 }
 .App {
-  max-width: 960px;
+  max-width: 820px;
   margin: 0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .footer {
+  margin: 30px 20px 50px;
+  text-align: center;
+  color: #3a525f;
+  opacity: 0.7;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .footer a {
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 1;
+  color: #3a525f;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App .footer a:hover {
+  text-decoration: underline;
+}
+.App h1 {
+  font-size: 80px;
   color: white;
+  text-shadow: 0px 10px 20px rgba(241, 225, 84 /50%);
+  text-align: center;
+  background-color: rgb(241, 225, 84);
+  margin-left: 40px;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  border-radius: 60px;
 }
-
-.App-link {
-  color: #61dafb;
+.App .starter {
+  max-width: 70%;
+  margin: 0 auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App h1 .search-icon {
+  font-size: 55px;
+}
+@media (max-width: 820px) {
+  .App h1 {
+    padding: 0 20px;
+    font-size: 48px;
+    padding-bottom: 5px;
   }
-  to {
-    transform: rotate(360deg);
+  .App .starter {
+    max-width: 82%;
+  }
+  .App h1 .search-icon {
+    display: none;
   }
 }

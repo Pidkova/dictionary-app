@@ -9,18 +9,15 @@ export default function Meaning(props) {
 
   return (
     <div className="section Meaning">
-      <h3>{props.meaning.partOfSpeech}</h3>
+      <h4>{props.meaning.partOfSpeech}</h4>
       {props.meaning.definitions.map(function(definition, index) {
         return (
-          <div key={index}>
-            <p>
-              <strong>Definition:</strong>
-              {definition.definition}
-            </p>
+          <div key={index} className="ms-2 mb-2">
+            <p>{definition.definition}</p>
             <div className="example">
               <Example example={definition.example} />
             </div>
-            <hr className="border border-secondary" />
+            <hr />
           </div>
         );
       })}

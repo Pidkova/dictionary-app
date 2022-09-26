@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
-import Photos from "./Photos";
+
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
@@ -16,6 +16,7 @@ export default function Dictionary(props) {
 
   function handleResponse(response) {
     setResults(response.data[0]);
+    console.log(response.data);
   }
 
   function handleKeywordChange(event) {
@@ -26,7 +27,7 @@ export default function Dictionary(props) {
     axios.get(apiUrl).then(handleResponse);
 
     let pexelsApiKey = `563492ad6f9170000100000154c5e095003648a28df337d95da0df5d`;
-    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
     let headers = { Authorization: `Bearer ${pexelsApiKey}` };
     axios
       .get(pexelsApiUrl, {
@@ -48,7 +49,7 @@ export default function Dictionary(props) {
     return (
       <div className="Dictionary container">
         <form onSubmit={handleSubmit} className="section Word-search">
-          <h1 className="mt-2">What word do you want to look up?</h1>
+          <h3 className="mt-2">What word do you want to look up?</h3>
           <div className="mt-2">
             <input
               type={"text"}
@@ -57,12 +58,10 @@ export default function Dictionary(props) {
               className="form-control input-focus-color-dark "
             />
           </div>
+          <p className="word-hint">i.e. mountain, yoga, play, happy</p>
         </form>
         <div>
-          <Results results={results} />
-        </div>
-        <div className="Photos">
-          <Photos photos={photos} />
+          <Results results={results} photos={photos} />
         </div>
       </div>
     );
