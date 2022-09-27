@@ -1,5 +1,5 @@
 import React from "react";
-import Photos from "./Photos";
+
 import Meaning from "./Meaning";
 import Phonetics from "./Phonetics";
 
@@ -7,8 +7,7 @@ import "./Phonetics.css";
 
 export default function Results(props) {
   console.log(props.results);
-  let photos = props.photos;
-  console.log(photos);
+
   if (props.results) {
     return (
       <div className="results">
@@ -21,9 +20,6 @@ export default function Results(props) {
               </div>
             );
           })}
-        </div>
-        <div>
-          <Photos photos={photos} />
         </div>
 
         {props.results.meanings.map(function(meaning, index) {

@@ -4,8 +4,11 @@
   line-height: 1.5;
   font-weight: bold;
   text-align: start;
-  color: rgb(228, 218, 121);
+  color: #769a2a;
   margin-bottom: 30px;
+}
+em {
+  box-shadow: 0 0 0 0.2rem rgba(166, 187, 121, 0.801);
 }
 .Meaning .example {
   text-align: left;

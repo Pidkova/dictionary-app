@@ -5,13 +5,10 @@
   margin-top: 50px;
 }
 .form-control:focus {
-  border-color: rgb(244, 233, 137);
-  box-shadow: 0 0 0 0.2rem rgba(249, 239, 144, 0.801);
+  border-color: #769a2a;
+  box-shadow: 0 0 0 0.2rem rgba(166, 187, 121, 0.801);
 }
-.btn-primary {
-  background-color: rgb(244, 233, 137);
-  border-color: rgb(241, 225, 84);
-}
+
 .section {
   background: white;
   padding: 30px;

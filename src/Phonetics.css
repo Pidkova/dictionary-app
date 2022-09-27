@@ -7,11 +7,11 @@
   justify-content: start;
 }
 .listen-link {
-  border: 1px solid rgb(241, 225, 84);
+  border: 1px solid #afc77e;
   text-decoration: none;
   padding: 8px 15px;
   font-size: 12px;
-  color: rgb(215, 200, 68);
+  color: #769a2a;
   margin-right: 10px;
   font-weight: bold;
   border-radius: 20px;
@@ -19,7 +19,7 @@
 }
 
 .listen-link:hover {
-  background: rgb(241, 225, 84);
+  background: #b5ca8b;
   color: white;
 }
 .transcription {

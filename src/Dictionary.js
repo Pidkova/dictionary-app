@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
-
+import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
@@ -10,18 +10,14 @@ export default function Dictionary(props) {
   let [loaded, setLoaded] = useState(false);
   let [photos, setPhotos] = useState(null);
 
-  function handlePexelsResponse(response) {
-    setPhotos(response.data.photos);
-  }
-
   function handleResponse(response) {
     setResults(response.data[0]);
     console.log(response.data);
   }
-
-  function handleKeywordChange(event) {
-    setKeyword(event.target.value);
+  function handlePexelsResponse(response) {
+    setPhotos(response.data.photos);
   }
+
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
@@ -35,11 +31,14 @@ export default function Dictionary(props) {
       })
       .then(handlePexelsResponse);
   }
-
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
+  function handleKeywordChange(event) {
+    setKeyword(event.target.value);
+  }
+
   function load() {
     setLoaded(true);
     search();
@@ -60,12 +59,12 @@ export default function Dictionary(props) {
           </div>
           <p className="word-hint">i.e. mountain, yoga, play, happy</p>
         </form>
-        <div>
-          <Results results={results} photos={photos} />
-        </div>
+        <Results results={results} photos={photos} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
     load();
+    return "loading";
   }
 }
